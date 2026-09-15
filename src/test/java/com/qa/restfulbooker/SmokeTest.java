@@ -1,16 +1,15 @@
 package com.qa.restfulbooker;
 
+import com.qa.restfulbooker.core.BaseUiTest;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class SmokeTest {
+public class SmokeTest extends BaseUiTest {
+
     @Test
     public void openBrowser() {
-
-        WebDriver driver = new ChromeDriver();
-        driver.get("https://automationintesting.online");
+        wait.until(d -> !d.getTitle().isEmpty());
         System.out.println("Title: " + driver.getTitle());
-        driver.quit();
     }
 }
