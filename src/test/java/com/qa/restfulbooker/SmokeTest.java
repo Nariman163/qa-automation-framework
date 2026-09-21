@@ -9,7 +9,7 @@ public class SmokeTest extends BaseUiTest {
 
     @Test
     public void openBrowser() {
-        wait.until(d -> !d.getTitle().isEmpty());
+        wait.until(d-> !d.getTitle().isEmpty());
         System.out.println("Title: " + driver.getTitle());
     }
 }

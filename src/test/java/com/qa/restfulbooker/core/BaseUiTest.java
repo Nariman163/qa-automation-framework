@@ -18,7 +18,6 @@ public class BaseUiTest {
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.get("https://automationintesting.online");
-
         wait = new WebDriverWait(driver, Duration.ofSeconds(10));
     }
 
