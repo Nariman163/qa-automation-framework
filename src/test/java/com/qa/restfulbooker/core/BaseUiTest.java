@@ -1,5 +1,6 @@
 package com.qa.restfulbooker.core;
 
+import com.qa.restfulbooker.config.ConfigReader;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.openqa.selenium.WebDriver;
@@ -17,7 +18,7 @@ public class BaseUiTest {
     public void setUp() {
         driver = new ChromeDriver();
         driver.manage().window().maximize();
-        driver.get("https://automationintesting.online");
+        driver.get(ConfigReader.getUiBaseUrl());
         wait = new WebDriverWait(driver, Duration.ofSeconds(10));
     }
 
